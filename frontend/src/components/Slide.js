@@ -3,6 +3,7 @@ import './Slide.css'; // Import Slide styles
 
 const Slide = () => {
   return (
+    <div className="Slide">
     <ul className="example-2">
       <li className="icon-content">
         <a
@@ -101,6 +102,7 @@ const Slide = () => {
         <div className="tooltip">Youtube</div>
       </li>
     </ul>
+    </div>
   );
 };
 

@@ -1,24 +1,31 @@
 ul {
+  top:100%;
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .example-2 {
   display: flex;
   justify-content: center;
-  align-items: center;
-  
+  padding: 0;
+  margin: 0;
 }
+
 .example-2 .icon-content {
-  margin: 0 10px;
   position: relative;
-  padding: 0.5rem;
+  padding: 0;
+  margin: 5px;
 }
+
 .example-2 .icon-content .tooltip {
-  align-items:center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 100%;
-  right: -10%;
-  transform: translateY(200%);
+  left: 50%;
+  transform: translate(-50%, 200%);
   color: #fff;
   padding: 6px 10px;
   border-radius: 5px;
@@ -27,11 +34,13 @@ ul {
   font-size: 14px;
   transition: all 0.3s ease;
 }
+
 .example-2 .icon-content:hover .tooltip {
   opacity: 1;
   visibility: visible;
-  top: -100px;
+  top: -1px;
 }
+
 .example-2 .icon-content a {
   position: relative;
   overflow: hidden;
@@ -45,18 +54,22 @@ ul {
   background-color: #fff;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover {
   box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
 }
+
 .example-2 .icon-content a svg {
   position: relative;
   z-index: 1;
   width: 30px;
   height: 30px;
 }
+
 .example-2 .icon-content a:hover {
   color: white;
 }
+
 .example-2 .icon-content a .filled {
   position: absolute;
   top: auto;
@@ -67,6 +80,7 @@ ul {
   background-color: #000;
   transition: all 0.3s ease-in-out;
 }
+
 .example-2 .icon-content a:hover .filled {
   height: 100%;
 }
@@ -80,6 +94,7 @@ ul {
 .example-2 .icon-content a[data-social="github"] ~ .tooltip {
   background-color: #24262a;
 }
+
 .example-2 .icon-content a[data-social="instagram"] .filled,
 .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
   background: linear-gradient(
@@ -92,6 +107,7 @@ ul {
     #fd1f1f
   );
 }
+
 .example-2 .icon-content a[data-social="youtube"] .filled,
 .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ff0000;
