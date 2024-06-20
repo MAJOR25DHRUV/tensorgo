@@ -1,10 +1,10 @@
-
 import React from 'react';
+import './Header.css'; // Importing header styles
 
 const Header = () => {
   return (
-    <div>
-      <h1>Main Heading</h1>
+    <div className="header-container">
+      <h1 className="header-heading">THINKPIK</h1>
     </div>
   );
 }
