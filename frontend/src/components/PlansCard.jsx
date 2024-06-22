@@ -1,9 +1,16 @@
-import React from 'react';
-import './Basic.css'; // Import Slide styles
+import { useState } from "react";
+import "./PlansCard.css";
 
-const Basic = () => {
+const PlansCard = ({title, content}) => {
+  const [cardClicked, setCardClicked] = useState(false);
+
+  const handleCardClick = () => {
+    setCardClicked(!cardClicked);
+  }
+
   return (
-<div class="card">
+    <div className={cardClicked? "plansCard-content-container" : ""}>
+    <div class={cardClicked ? "card-position" : "card"} onClick={handleCardClick}>
   <div class="content">
     <div class="back">
       <div class="back-content">
@@ -65,38 +72,24 @@ const Basic = () => {
       </g>
     </g>
   </svg>
-        <strong>BASIC</strong>
-      </div>
-    </div>
-    <div class="front">
-      
-      <div class="img">
-        <div class="circle">
-        </div>
-        <div class="circle" id="right">
-        </div>
-        <div class="circle" id="bottom">
-        </div>
-      </div>
-
-      <div class="front-content">
-        <small class="badge">Pasta</small>
-        <div class="description">
-          <div class="title">
-            <p class="title">
-              <strong>Spaguetti Bolognese</strong>
-            </p>
-
-          </div>
-          <p class="card-footer">
-            30 Mins &nbsp; | &nbsp; 1 Serving
-          </p>
-        </div>
+        <strong>{title}</strong>
       </div>
     </div>
   </div>
 </div>
-);
-};
+{cardClicked && (<div className={cardClicked ? "plans-container-visible" : "plans-container"}>
+      {content}
+      <div className="cart-button">
+          <div className="cart-button-container">
+            <button className="button">
+              Add to Cart
+            </button>
+          </div>
+        </div>
+</div> )}
 
-export default Basic;
+</div>
+  )
+}
+
+export default PlansCard
