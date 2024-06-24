@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./PlansCard.css";
+
 
 const PlansCard = ({title, content}) => {
   const [cardClicked, setCardClicked] = useState(false);
